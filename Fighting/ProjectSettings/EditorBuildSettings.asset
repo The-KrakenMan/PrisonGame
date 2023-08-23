@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main_Menu.unity
+    guid: 64a65ae8ae15cfe45b8b5c05419c45e0
+  - enabled: 1
+    path: Assets/Scenes/Fighting.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Yard.unity
+    guid: 3ab7f38c277187b41bb33fb096da86d4
+  - enabled: 1
+    path: Assets/Scenes/Prison_Cell.unity
+    guid: 97f5e1be36651644480a49378170cb9f
+  - enabled: 1
+    path: Assets/Scenes/Caffeteria.unity
+    guid: dcceb2475aee45946b08c33213a0ef0b
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: 055b049b4f7f53f4faba582ed0c0526c
+  m_configObjects: {}
