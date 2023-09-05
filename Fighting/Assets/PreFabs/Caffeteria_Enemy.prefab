@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7037143116300410213}
   - component: {fileID: 2222213571096456476}
   - component: {fileID: 1139938657761140419}
+  - component: {fileID: -1941440902122427647}
   m_Layer: 0
   m_Name: Caffeteria_Enemy
   m_TagString: Enemy
@@ -174,6 +175,27 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &-1941440902122427647
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6490961716691745218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f10922d03a72b79408b1dbf73c994055, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3a440a7fc1532f048addad866ced061e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2594862189065526015
 PrefabInstance:
   m_ObjectHideFlags: 0

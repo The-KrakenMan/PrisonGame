@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7947207011442141137}
   - component: {fileID: 1239670441789544360}
   - component: {fileID: 14411168189637751}
+  - component: {fileID: 4907747893966977837}
   m_Layer: 0
   m_Name: Yard_Enemy
   m_TagString: Enemy
@@ -174,6 +175,27 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &4907747893966977837
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194232348275983222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: f10922d03a72b79408b1dbf73c994055, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3a440a7fc1532f048addad866ced061e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &799369158094040996
 PrefabInstance:
   m_ObjectHideFlags: 0
