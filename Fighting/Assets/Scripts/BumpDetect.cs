@@ -22,6 +22,6 @@ public class BumpDetect : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Game Manager").GetComponent<Random_Encounter>().Bump();
         }
-        Destroy(this.transform.parent.gameObject);
+        Destroy(this.gameObject.transform.parent.gameObject.transform.parent.gameObject);
     }
 }

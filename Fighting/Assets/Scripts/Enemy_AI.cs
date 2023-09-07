@@ -8,11 +8,14 @@ public class Enemy_AI : MonoBehaviour
 {
     public NavMeshAgent Agent;
     public bool Activated = false;
+    public GameObject Player;
+    public Animator EnemyAnim;
     // Start is called before the first frame update
     void Start()
     {
         Agent = this.gameObject.GetComponent<NavMeshAgent>();
-        
+        Player = GameObject.FindGameObjectWithTag("Player");
+        EnemyAnim= GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,7 +24,13 @@ public class Enemy_AI : MonoBehaviour
         if (Activated == true)
         {
             Agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+            EnemyAnim.SetBool("isWalking", true);  
+
         }
+
+        this.transform.LookAt(Player.transform);
+
+       
         
     }
 }
