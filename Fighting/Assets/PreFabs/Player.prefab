@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  Avatar: {fileID: 7051695940088206067}
 --- !u!143 &7862653595622172117
 CharacterController:
   m_ObjectHideFlags: 0
@@ -312,6 +313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5098e34ba8f725f49868bcb870fefcee, type: 3}
+--- !u!1 &7051695940088206067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5098e34ba8f725f49868bcb870fefcee, type: 3}
+  m_PrefabInstance: {fileID: 7862653595387735970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7680740404256688201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5098e34ba8f725f49868bcb870fefcee, type: 3}

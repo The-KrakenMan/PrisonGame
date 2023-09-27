@@ -37,17 +37,21 @@ public class INTERACTION_MAN : MonoBehaviour
         if (RandomNum + Game_Manager.WantedLVL > 5)
         {
             Game_Manager.WantedLVL += 2;
-            Output1.SetActive(true);
+            Output1.SetActive(true);        
         }
         else
         {
             Game_Manager.PlayerDMG += 10;
             Output2.SetActive(true);
+            Player_Man.Inventory[0] = "Knife";
+            Debug.Log("InteractionMan");
         }
 
         ButtonHide1.SetActive(false);
         ButtonHide2.SetActive(false);
         TextHide1.SetActive(false);
+
+        
     }
 
     public void ReportKnife()

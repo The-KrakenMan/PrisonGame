@@ -3892,6 +3892,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283908267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &284312094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7051695940088206067, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+  m_PrefabInstance: {fileID: 1155701176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286479088
 GameObject:
   m_ObjectHideFlags: 0
@@ -19990,6 +19995,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7680740404256688201, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680740404256688201, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680740404256688201, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680740404256688201, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680740404256688201, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7862653594501848423, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.85
@@ -20030,6 +20055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7862653595622172114, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: Avatar
+      value: 
+      objectReference: {fileID: 284312094}
     - target: {fileID: 7862653595622172118, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_RootOrder
       value: 5

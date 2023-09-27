@@ -26,5 +26,6 @@ public class Shiv : MonoBehaviour
         }
         GameObject ShivDestroy = GameObject.FindGameObjectWithTag("Knife");
         Destroy(ShivDestroy.gameObject);
+        Destroy(this.gameObject);
     }
 }

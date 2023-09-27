@@ -14,6 +14,8 @@ public class Player_Man : MonoBehaviour
 
     public GameObject LeftPunchVisual;
     public GameObject RightPunchVisual;
+
+    public static string[] Inventory = new string[5];
     // Start is called before the first frame update
     void Start()
     {
