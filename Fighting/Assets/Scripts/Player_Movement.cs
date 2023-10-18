@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     public float Speed;
     public GameObject Avatar;
+    public Joystick joystick;
     void Start()
     {
         
@@ -15,10 +16,11 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+       
+        Vector3 move = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
         GetComponent<CharacterController>().Move(move * Time.deltaTime * Speed);
 
-        Vector3 MovementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 MovementDirection = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
         this.transform.Translate(MovementDirection*Speed*Time.deltaTime,Space.World);
 
         if (MovementDirection != Vector3.zero)
