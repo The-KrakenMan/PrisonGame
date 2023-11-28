@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Fighting_Man : MonoBehaviour
 {
     public GameObject Player;
@@ -10,6 +11,9 @@ public class Fighting_Man : MonoBehaviour
     public float AttackTimer;
     public int RandomNum;
     public int Damage;
+    Animator animator;
+    Enemy_AI enemy_AI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +21,11 @@ public class Fighting_Man : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         AttackTimer = RandomNum;
         Damage = RandomNum;
+        animator = GetComponent<Animator>();
+        enemy_AI = GetComponent<Enemy_AI>();
+       
+   
+
     }
 
     // Update is called once per frame
@@ -26,6 +35,13 @@ public class Fighting_Man : MonoBehaviour
         {
             Player.GetComponent<Player_Man>().LeftPunch();
             EnemyHealth -= Game_Manager.PlayerDMG;
+
+
+            //if (enemy_AI.Activated && EnemyHealth > 0)
+            //{
+            //    enemy_AI.PlayGettingHitAnimation(); // Call the method to play the getting_hit animation
+            //}
+
         }
         if (Input.GetMouseButtonDown(1))
         {
