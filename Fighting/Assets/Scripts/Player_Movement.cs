@@ -31,7 +31,6 @@ public class Player_Movement : MonoBehaviour
         {
             Avatar.transform.forward = MovementDirection;
             Avatar.transform.Rotate(new Vector3(0,180,0), Space.World);
-            Debug.Log("NOooooo");
             PlayerAnim.SetInteger("PlayerAnim", 2);
         }
         else

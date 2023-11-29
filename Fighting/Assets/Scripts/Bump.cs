@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,7 +51,6 @@ public class Bump : MonoBehaviour
             case 4:
                 BumpDeactivate();
                 Host.SetActive(false);
-                BumpOutput4.SetActive(false);
                 break;
 
         }

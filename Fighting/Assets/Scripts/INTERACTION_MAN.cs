@@ -5,24 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class INTERACTION_MAN : MonoBehaviour
 {
+
     public GameObject Output1;
     public GameObject Output2;
     public GameObject Output3;
     public GameObject Output4;
     public GameObject Output5;
 
- 
-
     public GameObject ButtonHide1;
     public GameObject ButtonHide2;
 
     public GameObject TextHide1;
 
-    public GameObject Host;
+    
+    GameObject Host;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Host = GameObject.FindGameObjectWithTag("Bump");
     }
 
     // Update is called once per frame
@@ -101,8 +101,11 @@ public class INTERACTION_MAN : MonoBehaviour
                 }
                 break;
             case 5:
+                Host = GameObject.FindGameObjectWithTag("Bump");
                 Deactivate();
                 Host.SetActive(false);
+                Output1.SetActive(true);
+                Debug.Log(this.gameObject);
                 break;
 
         }    

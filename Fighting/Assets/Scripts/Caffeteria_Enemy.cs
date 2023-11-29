@@ -73,7 +73,7 @@ public class Caffeteria_Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GetComponent<Random_Encounter>().Bump();
+           // GetComponent<Random_Encounter>().Bump();
         }
     }
 

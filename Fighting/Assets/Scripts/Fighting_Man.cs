@@ -7,25 +7,24 @@ using UnityEngine.SceneManagement;
 public class Fighting_Man : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject Enemy;
     public float EnemyHealth = 50;
     public float AttackTimer;
     public int RandomNum;
     public int Damage;
-    Animator animator;
-    Enemy_AI enemy_AI;
+    Animator player_anim;
+    Animator enemy_anim;
 
     // Start is called before the first frame update
     void Start()
     {
         RandomNum = Random.Range(1, 5);
         Player = GameObject.FindGameObjectWithTag("Player");
+        Enemy = GameObject.FindGameObjectWithTag("Enemy");
         AttackTimer = RandomNum;
         Damage = RandomNum;
-        animator = GetComponent<Animator>();
-        enemy_AI = GetComponent<Enemy_AI>();
-       
-   
-
+         player_anim = Player.GetComponent<Animator>();
+         enemy_anim = Enemy.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,19 +33,12 @@ public class Fighting_Man : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Player.GetComponent<Player_Man>().LeftPunch();
-            EnemyHealth -= Game_Manager.PlayerDMG;
-
-
-            //if (enemy_AI.Activated && EnemyHealth > 0)
-            //{
-            //    enemy_AI.PlayGettingHitAnimation(); // Call the method to play the getting_hit animation
-            //}
-
+            DamageEnemy(Game_Manager.PlayerDMG);
         }
         if (Input.GetMouseButtonDown(1))
         {
             Player.GetComponent<Player_Man>().RightPunch();
-            EnemyHealth -= Game_Manager.PlayerDMG;
+            DamageEnemy(Game_Manager.PlayerDMG);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -63,6 +55,7 @@ public class Fighting_Man : MonoBehaviour
         }
         else
         {
+            enemy_anim.SetTrigger("Punch");
             if (Player.GetComponent<Player_Man>().isBlocking)
             {
 
@@ -80,6 +73,14 @@ public class Fighting_Man : MonoBehaviour
         {
             SceneManager.LoadScene(Game_Manager.CurrentLocation); 
         }
+
+    }
+
+    public void DamageEnemy(int DMG)
+    {
+        EnemyHealth -= DMG;
+       
+        enemy_anim.SetTrigger("GetHit");
 
     }
 

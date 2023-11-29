@@ -20004,7 +20004,7 @@ PrefabInstance:
     - target: {fileID: 5542886870868948920, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9000000, guid: 5098e34ba8f725f49868bcb870fefcee, type: 3}
     - target: {fileID: 7680740404256688201, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -20065,6 +20065,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7862653595622172113, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_Height
+      value: 2.106178
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862653595622172113, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862653595622172113, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.05308896
+      objectReference: {fileID: 0}
     - target: {fileID: 7862653595622172114, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: Avatar
       value: 
@@ -20073,6 +20085,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2115961233}
+    - target: {fileID: 7862653595622172117, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
+      propertyPath: m_Height
+      value: 2.64
+      objectReference: {fileID: 0}
     - target: {fileID: 7862653595622172118, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -20083,7 +20099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862653595622172118, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.69
+      value: 3.19
       objectReference: {fileID: 0}
     - target: {fileID: 7862653595622172118, guid: 6aad07591a8fe504e96956f46dc2616d, type: 3}
       propertyPath: m_LocalPosition.z
