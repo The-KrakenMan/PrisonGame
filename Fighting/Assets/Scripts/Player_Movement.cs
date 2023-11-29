@@ -22,7 +22,6 @@ public class Player_Movement : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         GetComponent<CharacterController>().Move(move * Time.deltaTime * Speed);
 
-
         Vector3 MovementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         this.transform.Translate(MovementDirection*Speed*Time.deltaTime,Space.World);
 
