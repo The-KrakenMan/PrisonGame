@@ -15,6 +15,7 @@ public class Bump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Game_Manager.PrisonerHostility += 5;
     }
 
     // Update is called once per frame
@@ -51,6 +52,7 @@ public class Bump : MonoBehaviour
             case 4:
                 BumpDeactivate();
                 Host.SetActive(false);
+                BumpOutput1.SetActive(true);
                 break;
 
         }

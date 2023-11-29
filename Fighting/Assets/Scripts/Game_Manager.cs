@@ -9,8 +9,8 @@ public class Game_Manager : MonoBehaviour
 {
     public GameObject Player;
     public static string CurrentLocation;
-    public static float Minutes= 0;
-    public static float Hours = 5;
+    public static float Minutes= 45;
+    public static float Hours = 19;
     public static int WantedLVL;
     public static int PrisonerHostility = 1;
     public static float PlayerHP = 100;
@@ -19,6 +19,9 @@ public class Game_Manager : MonoBehaviour
     public TextMeshProUGUI TimerOut;
     public Slider HealthBar;
     public GameObject GameOverScreen;
+    public static int DayCount = 1;
+    public static int DayShower;
+    public static bool inCell=true;
 
     public static bool Showered;
     public static bool Breakfast;
@@ -28,7 +31,7 @@ public class Game_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -51,6 +54,11 @@ public class Game_Manager : MonoBehaviour
         {
             GameOver();
         }
+
+        if (PlayerHP > 100)
+        {
+            PlayerHP = 100;
+        }
     }
 
     public void GameOver()
@@ -61,6 +69,14 @@ public class Game_Manager : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene("Main_Menu");
+    }
+
+    public void Sleep()
+    {
+        DayCount++;
+        SceneManager.LoadScene("Prison_Cell");
+        Hours = 5;
+        Minutes = 0;
     }
     private void FixedUpdate()
     {

@@ -39,11 +39,4 @@ public class Enemy_AI : MonoBehaviour
         
     }
 
-    public void PlayGettingHitAnimation()
-    {
-        if (EnemyAnim != null)
-        {
-            EnemyAnim.SetInteger("Anim", 2); // Assuming you have a trigger parameter named "GettingHit" in your animator
-        }
-    }
 }

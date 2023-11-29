@@ -106,6 +106,7 @@ public class INTERACTION_MAN : MonoBehaviour
                 Host.SetActive(false);
                 Output1.SetActive(true);
                 Debug.Log(this.gameObject);
+                Game_Manager.PrisonerHostility += 5;
                 break;
 
         }    
