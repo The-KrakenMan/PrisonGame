@@ -13,6 +13,7 @@ public class Cell_Man : MonoBehaviour
     public GameObject Guard3;
     public GameObject Guard4;
     Animator animator;
+    bool arrested = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,13 +44,15 @@ public class Cell_Man : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Game_Manager.Hours>= 20 & Game_Manager.Minutes >= 00&Game_Manager.inCell == false)
+        if (Game_Manager.Hours>= 20 & Game_Manager.Minutes >= 0& Game_Manager.inCell == false )
         {
             Host.SetActive(true);
-            GuardDial(1);            
+            GuardDial(1);
+            Game_Manager.inCell = true;
+            arrested = true;
         }
 
-        if (Game_Manager.Hours == 20 & Game_Manager.Minutes == 00 & Game_Manager.inCell == true)
+       if (Game_Manager.Hours == 20 & Game_Manager.Minutes == 00 & Game_Manager.inCell == true & arrested == false)
         {
             this.GetComponent<Game_Manager>().Sleep();
         }
@@ -61,23 +64,19 @@ public class Cell_Man : MonoBehaviour
         Guard1.SetActive(false);
         Guard2.SetActive(false);
         Guard3.SetActive(false);
-        Guard4.SetActive(false);
+        
 
         switch (Dial)
         {
             case 1:
-                Guard1.SetActive(true);
-                break;
+                StartCoroutine(SceneTimer(Guard1,CheckFavour())); break;
             case 2:
-                Guard2.SetActive(true);
+                StartCoroutine(SceneTimer(Guard2, 4)); 
                 break;
             case 3:
-                Guard3.SetActive(true);
+                StartCoroutine(SceneTimer(Guard3, 4)); 
                 break;
             case 4:
-                Guard4.SetActive(true);
-                break;
-            case 5:
                 Host.SetActive(false);
                 this.GetComponent<Game_Manager>().Sleep();
                 break;
@@ -86,21 +85,27 @@ public class Cell_Man : MonoBehaviour
         
     }
 
-    public void CheckFavour()
+    public int CheckFavour()
     {
         int RandomNum = Random.Range(1, 3);
         if (RandomNum - Game_Manager.WantedLVL > 0)
         {
-            GuardDial(4);
+            return 2;
             
         }
         else
         {
-            GuardDial(3);
+            return 3;
             Game_Manager.PlayerHP -= 50;
         }
     }
      
-   
+   IEnumerator SceneTimer(GameObject Scene,int next)
+    {
+        Scene.SetActive(true);
+        yield return new WaitForSeconds(5);
+        Scene.SetActive(false);
+        GuardDial(next);
+    }
 
 }

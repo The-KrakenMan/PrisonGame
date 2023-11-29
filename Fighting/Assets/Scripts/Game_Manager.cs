@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.Jobs.LowLevel.Unsafe;
 
 public class Game_Manager : MonoBehaviour
 {
     public GameObject Player;
     public static string CurrentLocation;
-    public static float Minutes= 45;
-    public static float Hours = 19;
+    public static float Minutes= 00;
+    public static float Hours = 5;
     public static int WantedLVL;
     public static int PrisonerHostility = 1;
     public static float PlayerHP = 100;
@@ -58,6 +59,10 @@ public class Game_Manager : MonoBehaviour
         if (PlayerHP > 100)
         {
             PlayerHP = 100;
+        }
+        if (Hours == 20 & Minutes == 0 & SceneManager.GetActiveScene().name != "Prison_Cell")
+        {
+            SceneManager.LoadScene("Prison_Cell");
         }
     }
 
